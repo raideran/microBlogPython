@@ -16,7 +16,7 @@ def index():
             'body': 'EndGame Movie was amazing'
         },
     ]
-    return render_template('index.html', title='Home', user=user, posts=posts,)
+    return render_template('index.html', title='Home', user=user, posts=posts, basedir=basedir)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
