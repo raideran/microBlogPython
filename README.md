@@ -16,6 +16,7 @@ In order to execute the code you will need to install some flask extensions
 2. Flask SQLAlchemy is a ORM to manage DB using entities: `pip install flask-sqlalchemy`
 3. Flask Migrate to update DB data structure: `pip install flask-migrate`
 4. This Micloblog was created using Mysql instead of SQLite, so you will need to install mysql client: `pip install "mysqlclient==1.3.12`
+5. Flask login in order to manage user login state: `pip install flask-login`
 
 ### How to run it (Area in construction):
 1. `flask db init`
