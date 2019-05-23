@@ -9,7 +9,9 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(64), index=True, unique=True, nullable=False)
     email = db.Column(db.String(120), index=True, unique=True, nullable=False)
     password = db.Column(db.String(128), nullable=False)
-    posts = db.relationship('Post', backref='author', lazy='dynamic')
+    posts = db.relationship('Post', backref='author', lazy='dynamic'),
+    about_me = db.Column(db.String(128))
+    last_seen = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __init__(self, username, email, password):
         self.username = username
